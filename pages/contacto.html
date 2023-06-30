@@ -5,60 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="shortcut icon" href="/multimedia/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../multimedia/icono.png" type="image/x-icon">
     <link rel="stylesheet" href="../estilo.css">
 </head>
 <body><!--Comienzo del cuerpo-->
-    <header><!--Comienzo del header-->
+    <!--Comienzo del header-->
+    <header>
         <div>
-            <nav><!--Barra de navegacion-->
-                <a href="../index.html">Inicio</a>
-                <a href="./contacto.html">Contacto</a>
-                <a href="./galeria.html">Galeria</a>
-                <a href="./nosotros.html">Nosotros</a>
-                <a href="./faq.html">FAQ</a>
-            </nav><!--Fin barra de navegacion-->
+            <!--Comienzo barra de navegacion-->
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <!-- Brand -->
+                <a class="navbar-brand" href="index.html"><img src="../multimedia/icono.png" alt="icono"></a>
+            
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler button-border" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse txtderecha" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--Fin barra de navegacion-->
         </div>
-    </header><!--Fin del header-->
-    <h1 class="titulos center">Contacto</h1><!--Titulo-->
+    </header>
+<!--Fin del header-->
+    <h1 class="titulos center titulocontacto">Contacto</h1><!--Titulo-->
     <!--Inicio del formulario de contacto-->
-    <div>
-        <form action="get" method="post" class="formulario">
-            <div>
-                <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+    <div class="contenedor-contacto">
+        <div class="form-container center">
+            <h2 class="rosita">Formulario</h2>
+            <form class="form">
+                <div class="form-group">
+                    <label for="email">Tu Email</label>
+                    <input type="text" id="email" name="email" required="">
+                </div>
+            <div class="form-group">
+                <label for="textarea">¿Como te podemos ayudar?</label>
+                <textarea name="textarea" id="textarea" rows="10" cols="50" required=""></textarea>
             </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
-            </div>
-            <div>
-                <label for="consulta">Consulta:</label>
-                <textarea id="consulta" name="consulta" rows="6" required></textarea>
-            </div>
-            <div>
-                <input type="submit" value="Enviar">
-            </div>
-        </form>
-        <!--Fin formulario de contacto-->
-        <div>
-            <!--mapa de google maps-->
-            <h1 id="txtmap">¿Como Llegar?</h1>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.8741027823403!2d2.3350690764080446!3d48.860611071332414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d877937b0f%3A0xb975fcfa192f84d4!2sMuseo%20del%20Louvre!5e0!3m2!1ses!2sar!4v1685425694091!5m2!1ses!2sar" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <button class="form-submit-btn" type="submit">Enviar</button>
+            </form>
         </div>
+        <!--Fin formulario de contacto-->
+            <!--mapa de google maps-->
+            <div class="contenedor-contacto">
+                <div class="form-container center">
+                    <h2 class="rosita">¿Como llegar?</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.8741027823403!2d2.3350690764080446!3d48.860611071332414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d877937b0f%3A0xb975fcfa192f84d4!2sMuseo%20del%20Louvre!5e0!3m2!1ses!2sar!4v1685425694091!5m2!1ses!2sar" width="350" height="320" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
     </div>
     <!--Comienzo footer-->
-    <footer class="footer">
-        <div class="redeslinks">
-            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-            <a href="https://www.whatsapp.com/" target="_blank">Whatsapp</a>
-            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+    <footer class="footer bg-dark navbar-fixed-bottom">
+        <div class="redeslinks"> <!--Links a redes sociales-->
+            <a href="https://www.facebook.com/" target="_blank"><img src="../multimedia/facebook_109862.png" alt="facebook"></a>
+            <a href="https://www.whatsapp.com/" target="_blank"><img src="../multimedia/whatsapp_109861.png" alt="whatsapp"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../multimedia/instagam_109863.png" alt="instagram"></a>
         </div>
+        <br>
+        <span class="center colortexto">Copyright 1999-2023 by Refsnes Data. All Rights Reserved.</span>
     </footer>
-    <!--Fin footer-->
+    <!--Fin del footer-->
+
+
+<!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 </body><!--Final del cuerpo-->
 </html>

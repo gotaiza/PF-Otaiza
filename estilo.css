@@ -4,74 +4,131 @@
 }
 
 header {
-  background-color: beige;
-  padding: 10px;
   position: sticky;
   top: 0;
   left: 0;
-  text-align: right;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: #1f1f1f;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url(multimedia/Van_Gogh_-_Rhone_-_1920-1080.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 0%;
 }
 
-nav {
+.navbar {
   text-align: right;
-  margin: 10px;
-  padding-right: 20px;
+  background-color: #e81cff !important;
 }
 
 nav a {
-  color: white;
+  color: white !important;
   font-weight: bolder;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   padding: 10px;
-  background-color: #001831;
   border: none;
-  border-radius: 5px;
   text-decoration: none;
 }
 
-a:hover {
-  background-color: slateblue;
+.txtderecha{
+  justify-content: end;
 }
 
-.tituloinicio {
-  font-weight: bolder;
-  font-size: 100px;
-  color: white;
-  padding: 40px;
-}
-
-#textoinicio {
-  color: beige;
-  padding: 5px 10px 40px 40px;
-  display: inline-block;
-  width: 50rem;
-  text-align: left;
-}
-
-#imginicio {
-  height: 300px;
-  width: 250px;
-  margin-right: 20px;
-  margin-left: 80px;
-  display: inline-block;
-  text-align: right;
-}
-
-.center {
-  text-align: center;
+.button-border{
+  border: none;
 }
 
 .titulos {
   font-weight: bolder;
   font-size: 100px;
-  color: white;
+  color: beige;
   padding: 40px;
+  text-align: center;
+  text-shadow: 5px 5px 3px black;
+}
+
+.textoinicio {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  padding: 5px 10px 40px 40px;
+  width: 50%;
+  text-shadow: 5px 5px 3px black;
+}
+
+.sombra{
+  text-shadow: 5px 5px 3px black;
+}
+
+.contenedor-contacto{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.contenedor-inicio {
+  display: flex;
+  align-items: center; 
+}
+
+.contenedor-inicio img {
+  flex: 0 0 auto;
+  margin-left: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-inicio {
+    flex-direction: column;
+  }
+  
+  .contenedor-inicio img {
+    margin-right: 0; 
+    margin-bottom: 10px; 
+  }
+  
+  .textoinicio{
+    width: auto;
+  }
+
+  .contenedor-contacto {
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width:425px) {
+  .contenedor-inicio {
+    flex-direction: column;
+  }
+
+  .contenedor-inicio img {
+    margin-bottom: 10px;
+    margin-left: 0;
+    width: 350px;
+    height: 350px;
+  }
+
+  .textoinicio{
+    font-size: small;
+    width: auto;
+  }
+
+  .contenedor-contacto {
+    flex-direction: column;
+  }
+
+  .titulocontacto{
+    font-size: 80px;
+  }
+}
+
+.center {
+  text-align: center;
 }
 
 .colortexto {
@@ -91,7 +148,8 @@ a:hover {
 
 #txtmap {
   color: white;
-  background-color: brown;
+  background-color: #e81cff;
+  font-family: "Montserrat", sans-serif;
 }
 
 .galeria {
@@ -106,6 +164,11 @@ a:hover {
   margin: 20px;
   border: 1px solid white;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nosotroslinks{
+  text-align: center;
+  margin: 20px;
 }
 
 .redes {
@@ -144,6 +207,119 @@ a:hover {
   color: white;
   padding: 40px;
 }
+.padding{
+  padding: 20px;
+}
+
+.rosita{
+  color: #e81cff;
+}
+
+
+.form-container {
+  width: 400px;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+
+
+
+
 
 /*Sigue normalize*/
 
