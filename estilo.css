@@ -81,6 +81,7 @@ nav a {
   margin-left: 5rem;
 }
 
+
 @media screen and (max-width: 768px) {
   .contenedor-inicio {
     flex-direction: column;
@@ -124,6 +125,41 @@ nav a {
 
   .titulocontacto{
     font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contenedor-inicio{
+    flex-direction: column;
+  }
+
+  .contenedor-inicio img {
+    margin-bottom: 10px;
+    margin-left: 0;
+    width: 340px;
+    height: 340px;
+  }
+
+  .contenedor-contacto{
+    flex-direction: column;
+  }
+
+  .textoinicio{
+    width: auto;
+    font-size: small;
+  }
+
+  .titulocontacto{
+    font-size: 65px;
+  }
+
+  .form-container{
+    width: 350px !important;
+  }
+
+  .map{
+    width: 300px !important;
+    height: 290px !important;
   }
 }
 
