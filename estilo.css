@@ -8,11 +8,11 @@ header {
   top: 0;
   left: 0;
   font-family: Arial, Helvetica, sans-serif;
+  z-index: 10;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(multimedia/wave-haikei.svg);
   background-image: url(multimedia/blob-scene-haikei.svg);
   background-position: center;
   background-size: cover;
@@ -32,6 +32,10 @@ nav a {
   padding: 10px;
   border: none;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+nav a:hover {
+  color: #313131 !important;
 }
 
 .txtderecha {
@@ -42,7 +46,11 @@ nav a {
   border: none;
 }
 
-.titulo_inicio {
+.btn_rosa {
+  background-color: #e81cff;
+}
+
+.titulo_inicio h1 {
   font-weight: bolder;
   font-size: 100px;
   color: beige;
@@ -67,8 +75,14 @@ nav a {
   font-size: 1.25rem;
   font-weight: bolder;
   padding: 5px 0px 0px 40px;
-  width: 50%;
+  width: 70%;
   text-shadow: 5px 5px 3px black;
+}
+
+.gif {
+  padding: 20px 10px;
+  width: 400px;
+  height: 400px;
 }
 
 .sombra {
@@ -87,11 +101,30 @@ nav a {
   flex-direction: column;
 }
 
+.contenedor_2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contenedor_nos {
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  align-items: center;
+}
+.contenedor_nos img {
+  width: 350px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media screen and (max-width: 768px) {
-  .contenedor-inicio {
+  .contenedor_2 {
     flex-direction: column;
   }
-  .contenedor-inicio img {
+  .gif img {
     margin-right: 0;
     margin-bottom: 10px;
   }
@@ -103,10 +136,10 @@ nav a {
   }
 }
 @media screen and (max-width: 425px) {
-  .contenedor-inicio {
+  .contenedor_2 {
     flex-direction: column;
   }
-  .contenedor-inicio img {
+  .gif img {
     margin-bottom: 10px;
     margin-left: 0;
     width: 350px;
@@ -124,10 +157,10 @@ nav a {
   }
 }
 @media screen and (max-width: 375px) {
-  .contenedor-inicio {
+  .contenedor_2 {
     flex-direction: column;
   }
-  .contenedor-inicio img {
+  .gif img {
     margin-bottom: 10px;
     margin-left: 0;
     width: 340px;
@@ -185,9 +218,19 @@ nav a {
 .galeria img {
   width: 300px;
   height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 20px;
   border: 1px solid white;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid #f3f3f3;
+  overflow: hidden;
+  z-index: 0;
 }
 
 .nosotroslinks {
