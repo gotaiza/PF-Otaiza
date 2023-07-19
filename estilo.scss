@@ -160,8 +160,10 @@ nav a {
     .gif {
         margin-bottom: 10px;
         margin-left: 0;
-        width: 350px;
-        height: 350px;
+        img{
+            width: 350px;
+            height: 350px;
+        }
     }
 
     .textoinicio {
@@ -216,8 +218,10 @@ nav a {
     .gif {
         margin-bottom: 10px;
         margin-left: 0;
-        width: 320px !important;
-        height: 320px !important;
+            img{
+                width: 320px !important;
+                height: 320px !important;
+            }
     }
 
     .titulos{

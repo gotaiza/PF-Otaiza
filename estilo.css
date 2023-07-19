@@ -152,6 +152,8 @@ nav a:hover {
   .gif {
     margin-bottom: 10px;
     margin-left: 0;
+  }
+  .gif img {
     width: 350px;
     height: 350px;
   }
@@ -196,6 +198,8 @@ nav a:hover {
   .gif {
     margin-bottom: 10px;
     margin-left: 0;
+  }
+  .gif img {
     width: 320px !important;
     height: 320px !important;
   }
