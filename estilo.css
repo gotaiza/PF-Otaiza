@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -13,10 +17,13 @@ header {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(multimedia/blob-scene-haikei.svg);
+  background-image: url(multimedia/layered-steps-haikei.svg);
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 0%;
+  min-height: 100%;
 }
 
 .navbar {
@@ -50,16 +57,6 @@ nav a:hover {
   background-color: #e81cff;
 }
 
-.titulo_inicio h1 {
-  font-weight: bolder;
-  font-size: 100px;
-  color: beige;
-  padding: 40px 0px 5px 40px;
-  padding-bottom: 1%;
-  text-shadow: 5px 5px 3px black;
-  margin: 0;
-}
-
 .titulofaq {
   font-weight: bolder;
   font-size: 92px;
@@ -78,6 +75,15 @@ nav a:hover {
   text-shadow: 5px 5px 3px black;
 }
 
+.textoinicio h1 {
+  font-weight: bolder;
+  font-size: 100px;
+  color: beige;
+  padding: 40px 0px 5px 40px;
+  padding-bottom: 1%;
+  text-shadow: 5px 5px 3px black;
+  margin: 0;
+}
 .textoinicio h2 {
   color: white;
   font-family: "Montserrat", sans-serif;
@@ -138,7 +144,7 @@ nav a:hover {
     margin-right: 0;
     margin-bottom: 10px;
   }
-  .textoinicio {
+  .textoinicio h2 {
     width: auto;
   }
   .contenedor-contacto {
@@ -157,8 +163,8 @@ nav a:hover {
     width: 350px;
     height: 350px;
   }
-  .textoinicio {
-    font-size: small;
+  .textoinicio h2 {
+    font-size: medium;
     width: auto;
   }
   .contenedor-contacto {
@@ -181,7 +187,7 @@ nav a:hover {
   .contenedor-contacto {
     flex-direction: column;
   }
-  .textoinicio {
+  .textoinicio h2 {
     width: auto;
     font-size: small;
   }
@@ -205,6 +211,50 @@ nav a:hover {
   }
   .titulos {
     font-size: 65px;
+  }
+  .titulofaq {
+    font-size: 55px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 374px) {
+  .contenedor_2 {
+    flex-direction: column;
+  }
+  .contenedor-contacto {
+    flex-direction: column;
+  }
+  .contenedor-inicio {
+    text-align: center;
+  }
+  .textoinicio h1 {
+    padding: 0;
+  }
+  .textoinicio h2 {
+    width: auto;
+    font-size: small;
+    padding: 0;
+  }
+  .form-container {
+    width: 300px !important;
+  }
+  .map {
+    width: 250px !important;
+    height: 240px !important;
+  }
+  .gif {
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+  .gif img {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  .titulos {
+    font-size: 65px;
+  }
+  .titulocontacto {
+    font-size: 60px;
+    align-items: center;
   }
   .titulofaq {
     font-size: 55px;
