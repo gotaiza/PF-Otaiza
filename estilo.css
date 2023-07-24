@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 html {
@@ -98,6 +99,7 @@ nav a:hover {
   padding: 20px 10px;
   width: 400px;
   height: 400px;
+  overflow-x: visible !important;
 }
 
 .sombra {
@@ -120,6 +122,7 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-bottom: 20px;
   overflow: hidden;
 }
 
@@ -151,7 +154,7 @@ nav a:hover {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .contenedor_2 {
     flex-direction: column;
   }
@@ -180,7 +183,7 @@ nav a:hover {
     font-size: 70px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 424px) {
   .contenedor_2 {
     flex-direction: column;
   }
@@ -236,6 +239,7 @@ nav a:hover {
   }
   .form-container {
     width: 300px !important;
+    margin-bottom: 10px !important;
   }
   .map {
     width: 250px !important;
@@ -250,14 +254,29 @@ nav a:hover {
     height: 280px !important;
   }
   .titulos {
-    font-size: 65px;
+    font-size: 60px;
   }
   .titulocontacto {
     font-size: 60px;
     align-items: center;
   }
   .titulofaq {
-    font-size: 55px;
+    font-size: 50px;
+  }
+  .fondo h2 {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .fondo h3 {
+    font-size: 18px;
+  }
+  .galeria img {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  .card {
+    width: 300px !important;
+    margin-bottom: 10px !important;
   }
 }
 .center {
@@ -320,7 +339,11 @@ nav a:hover {
 
 .fondo {
   width: 75%;
-  background-color: rgba(255, 181, 181, 0.168627451);
+  background-color: rgba(0, 0, 0, 0.589);
+}
+
+.beige {
+  color: rgb(192, 192, 133);
 }
 
 .footer {
